@@ -104,15 +104,98 @@
             font-size: 0.8rem;
         }
 
-        /* 響應式設計 */
-        @media (max-width: 768px) {
+         /* 響應式設計: 手機裝置 (寬度小於480px) */
+        @media (max-width: 480px) {
+            header {
+                padding: 10px;
+                text-align: center;
+            }
+
             nav a {
                 display: block;
                 margin: 5px 0;
             }
 
+            main {
+                padding: 10px;
+            }
+
+            article {
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
             iframe {
                 width: 100%;
+                height: 200px;
+            }
+
+            figure {
+                text-align: center;
+            }
+        }
+
+        /* 響應式設計: 平板裝置 (寬度480px ~ 768px) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            header {
+                padding: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 5px 15px;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            article {
+                margin-bottom: 25px;
+            }
+
+            iframe {
+                width: 100%;
+                height: 250px;
+            }
+
+            table {
+                font-size: 1rem;
+            }
+        }
+
+        /* 響應式設計: 桌面裝置 (寬度大於768px) */
+        @media (min-width: 769px) {
+            nav {
+                display: flex;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            iframe {
+                width: 300px;
+                height: 300px;
+            }
+
+            article {
+                margin-bottom: 30px;
             }
         }
     </style>
@@ -243,16 +326,18 @@
         <!--圖片作品集介紹與描述-->
         <article id="section6">
             <h2>照片集</h2>
-            <figure>
-                <img src="volleyball.jpg" controls width="350">
-                <figcaption>資科女排讚！</figcaption>
-            </figure>
+            <div class="photo-gallery">
+                <figure>
+                    <img src="volleyball.jpg" controls width="350">
+                    <figcaption>資科女排讚！</figcaption>
+                </figure>
 
-            <!--<figure style="display:inline-block;">-->
-            <figure>
-                <img src="vol.jpg" controls width="300">
-                <figcaption>終於拍到贏家照</figcaption>
-            </figure>
+                <!--<figure style="display:inline-block;">-->
+                <figure>
+                    <img src="vol.jpg" controls width="30">
+                    <figcaption>終於拍到贏家照</figcaption>
+                </figure>
+            </div>
         </article>
 
         <!-- 嵌入PDF文件 -->
